@@ -59,7 +59,7 @@ function Main() {
             >
                 <Box className="container">
                 {items.map((item, index) => (
-                <Element name={item ? item.type.name : ""} key={index}>{item}</Element>
+                <Element name={componentsNames[index].name} key={index}>{item}</Element>
                 ))}
                 </Box>
             </InfiniteScroll>

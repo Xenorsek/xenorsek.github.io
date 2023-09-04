@@ -18,7 +18,7 @@ const Header = ({fetchMoreData, componentsNames}) => {
                     delay: 0,
                     smooth: 'easeInOutQuart',
                 });
-            },400)
+            }, 500)
             
         }
       };
@@ -31,11 +31,11 @@ return (
                 Xenorsek!
             </Typography>
             <div className="navigation">
-                <Button variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>                
-                <Button variant="text"  onClick={()=>{scrollToSection(1)}}>Umiejętności</Button>
-                <Button variant="text" onClick={()=>{scrollToSection(2)}}>Projekty</Button>
-                <Button variant="text" onClick={()=>{scrollToSection(3)}}>Doświadczenie</Button>
-                <Button variant="text" onClick={()=>{scrollToSection(4)}}>Kontakt</Button>
+                <Button color="secondary" variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>                
+                <Button color="secondary" variant="text" onClick={()=>{scrollToSection(1)}}>Umiejętności</Button>
+                <Button color="secondary" variant="text" onClick={()=>{scrollToSection(2)}}>Projekty</Button>
+                <Button color="secondary" variant="text" onClick={()=>{scrollToSection(3)}}>Doświadczenie</Button>
+                <Button color="secondary" variant="text" onClick={()=>{scrollToSection(4)}}>Kontakt</Button>
             </div>
             </Toolbar>
         </AppBar>
