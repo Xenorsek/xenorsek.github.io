@@ -1,7 +1,7 @@
 import './assets/styles/main.scss'
 import Main from './components/Main/Main';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import * as React from 'react';
+import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -31,10 +31,13 @@ function App() {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Main />
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+         <Main />
+      </ThemeProvider>
+      
+    </>
   );
 }
 

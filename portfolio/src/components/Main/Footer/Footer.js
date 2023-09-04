@@ -2,7 +2,7 @@ import { Card } from "@mui/material";
 
 function Footer(){
     return(
-        <div class="footer">
+        <div className="footer">
             <Card>
                 Znajdziesz mnie na: 
                 linkedin
