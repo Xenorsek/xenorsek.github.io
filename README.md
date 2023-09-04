@@ -1,2 +1,0 @@
-# xenorsek.github.io
-Portfolio
