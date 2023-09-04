@@ -1,14 +1,26 @@
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Container from "./containers/Container";
-import { Container as Layout } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import React, { useState } from 'react';
 import { Element } from 'react-scroll';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import ScrollTop from "../custom/BacktToTopButton";
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import About from "./containers/About/About";
+import Skills from "./containers/Skills/Skills";
+import Projects from "./containers/Projects/Projects";
+import Experience from "./containers/Experience/Experience";
 
 function Main() {
     const [hasMore, setHasMore] = useState(true);
-    const [componentsNames, setComponentsNames] = useState([{name: "Container", visible: true}, {name: "Footer", visible: false}]);
+    const [componentsNames, setComponentsNames] = useState([
+        {name: "About", visible: true},
+        {name: "Skills", visible: true},
+        {name: "Projects", visible: true},
+        {name: "Experience", visible: false},
+        {name: "Footer", visible: false}
+    ]);
 
     const handleChangeComponents = (index, visible) => {
         let arr = [...componentsNames];
@@ -16,10 +28,11 @@ function Main() {
         setComponentsNames(arr);
     }
 
-    const components = [<Container/>, <Footer/>]
-    const [items, setItems] = useState([components[0]]);
+    const components = [<About/>, <Skills/>, <Projects/>, <Experience/>, <Footer/>]
+    const [items, setItems] = useState(components.slice(0,4));
 
     const fetchMoreData = (index = 0 ) => {
+        console.log("Is fatching")
         if(index !== 0 ){
             setItems([...items, ...components.slice(items.length, index + 1)])
         }
@@ -36,20 +49,26 @@ function Main() {
       };
 
     return(
-        <Layout className="layout">
+        <Container>
             <Header componentsNames={componentsNames} fetchMoreData={fetchMoreData}  />
-
             <InfiniteScroll
                 dataLength={items.length}
                 next={fetchMoreData}
                 hasMore={hasMore}
                 loader={<h4>Ładowanie...</h4>}
             >
+                <Box className="container">
                 {items.map((item, index) => (
                 <Element name={item ? item.type.name : ""} key={index}>{item}</Element>
                 ))}
+                </Box>
             </InfiniteScroll>
-        </Layout>
+            <ScrollTop>
+                <Fab size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            </ScrollTop>
+        </Container>
     );
 }
 

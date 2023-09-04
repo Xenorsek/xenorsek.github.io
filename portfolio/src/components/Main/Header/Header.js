@@ -1,7 +1,7 @@
+import { AppBar, Box, Toolbar, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import { scroller } from 'react-scroll';
 const Header = ({fetchMoreData, componentsNames}) => {
-
     const scrollToSection = (section) => {
         if(componentsNames[section].visible){
             scroller.scrollTo(componentsNames[section].name, {
@@ -21,23 +21,25 @@ const Header = ({fetchMoreData, componentsNames}) => {
             },400)
             
         }
-
-        
       };
 
 return (
-    <div className="header">
-        <div className="logo">
-            Xenorsek!
-        </div>
-        <div className="navigation">
-            <Button variant="text" >O mnie</Button>
-            <Button variant="text" >Doświadczenie</Button>
-            <Button variant="text" >Umiejętności</Button>
-            <Button variant="text">Projekty</Button>
-            <Button variant="text" onClick={()=>{scrollToSection(1)}}>Kontakt</Button>
-        </div>
-    </div>
+    <Box>
+        <AppBar position="static" className='header'>
+            <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Xenorsek!
+            </Typography>
+            <div className="navigation">
+                <Button variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>                
+                <Button variant="text"  onClick={()=>{scrollToSection(1)}}>Umiejętności</Button>
+                <Button variant="text" onClick={()=>{scrollToSection(2)}}>Projekty</Button>
+                <Button variant="text" onClick={()=>{scrollToSection(3)}}>Doświadczenie</Button>
+                <Button variant="text" onClick={()=>{scrollToSection(4)}}>Kontakt</Button>
+            </div>
+            </Toolbar>
+        </AppBar>
+    </Box>
 )
 }
 export default Header;

@@ -2,3 +2,9 @@
 @import "footer";
 @import "variables";
 @import "container";
+
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
