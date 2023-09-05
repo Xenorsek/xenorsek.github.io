@@ -7,3 +7,16 @@
         font-size: 30px;
     }
 }
+.iconNavigation{
+        display:none;
+    }
+
+@media (max-width: 768px) {
+    .navigation{
+        display:none;
+    }
+
+    .iconNavigation{
+        display:inherit;
+    }
+  }
