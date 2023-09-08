@@ -4,7 +4,15 @@
 }
 
 .projectCardCarousel{
-    float:right;
-    margin-left:30px;
-    margin-top:-55px;
+    &.right{
+        margin-top:-60px;
+        float:right;
+        margin-left:30px;
+    }
+    
+    &.left{
+        margin-top:-60px;
+        float:left;
+        margin-right:30px;        
+    }
 }

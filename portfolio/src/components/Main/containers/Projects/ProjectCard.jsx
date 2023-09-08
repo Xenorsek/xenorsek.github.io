@@ -29,7 +29,7 @@ const ProjectCard = () => {
     return (<Card className="projectCard">
         <CardHeader title={header}/>
         <CardContent className="projectCardContent">
-            <SwipeableTextMobileStepper className="projectCardCarousel" images={images} showControls={false} showTitle={false} />
+            <SwipeableTextMobileStepper className="projectCardCarousel right" images={images} showControls={false} showTitle={false} />
             <Typography>{description}</Typography>            
         </CardContent>
          
