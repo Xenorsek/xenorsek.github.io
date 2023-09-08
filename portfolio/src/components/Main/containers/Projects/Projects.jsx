@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import ProjectCard from "./ProjectCard";
 
 function Projects(){
     return (
@@ -11,6 +12,8 @@ function Projects(){
                 </Typography> 
             </CardContent>
             </Card>
+
+            <ProjectCard />
         </div>
     )
 }
