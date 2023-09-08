@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 import SwipeableTextMobileStepper from "../../../custom/AutoPlaySwipeableViews ";
-const ProjectCard = () => {
+const ProjectCard = ({alignItems}) => {
     const header = "Delivery Driver";
     const description = "Moja fascynacja programowaniem zaczęła się, gdy po raz pierwszy zetknąłem się z C#. Ta wszechstronna i potężna technologia zapoczątkowała moją przygodę z .NET, a od tego czasu nie patrzyłem już wstecz. Pracując w różnych projektach, od małych startupów po duże przedsiębiorstwa, zdobyłem cenne doświadczenie w projektowaniu, rozwijaniu i utrzymaniu aplikacji na platformie .NET.";
+    const carouselClass = "projectCardCarousel " + alignItems;
+    const cardHeaderclass = "cardHeader " + alignItems;
     const images = [
         {
           label: 'San Francisco – Oakland Bay Bridge, United States',
@@ -27,10 +29,10 @@ const ProjectCard = () => {
       ];
 
     return (<Card className="projectCard">
-        <CardHeader title={header}/>
+        <CardHeader className={cardHeaderclass} title={header}/>
         <CardContent className="projectCardContent">
-            <SwipeableTextMobileStepper className="projectCardCarousel right" images={images} showControls={false} showTitle={false} />
-            <Typography>{description}</Typography>            
+            <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} />
+            <Typography className="cardDescription">{description}</Typography>
         </CardContent>
          
     </Card>)
