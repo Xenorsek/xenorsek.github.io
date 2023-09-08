@@ -3,10 +3,17 @@
     flex-direction: column;
     gap:20px;
 }
+
 .projectCard{
     margin-top: 20px;
     padding:20px;
+    
+    &.showOnPage{
+        animation-duration: 1s;
+        animation-name: example;
+    }
 }
+
 .cardHeader{
     &.left{
         text-align: right;
@@ -15,9 +22,11 @@
         left:left;
     }
 }
+
 .cardDescription{
     text-align: justify;
 }
+
 .projectCardCarousel{
     &.right{
         margin-top:-60px;
@@ -31,3 +40,12 @@
         margin-right:30px;        
     }
 }
+
+@keyframes example {
+    from {
+        margin-left:500px;
+    }
+    to {
+        margin-left:0px;
+    }
+  }
