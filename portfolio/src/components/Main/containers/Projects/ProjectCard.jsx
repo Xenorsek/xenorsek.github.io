@@ -48,14 +48,14 @@ const ProjectCard = ({alignItems}) => {
   
       return () => {
         if (projectCardRefCurrent) {
-          observer.unobserve(projectCardRefCurrent); // Upewnij się, że przerywasz obserwację, gdy komponent jest odmontowywany
+          observer.unobserve(projectCardRefCurrent); // przerwanie obserwacji gdy komponent jest odmontowywany
         }
       };
     }, []);
 
     return (
-      <Card ref={projectCardRef} className={scroll ? "projectCard showOnPage" : "projectCard"}>
-        <CardHeader className={cardHeaderclass} title={header}/>
+      <Card ref={projectCardRef} className={scroll ? "projectCard " + alignItems : "projectCard"}>
+        <CardHeader titleTypographyProps={{variant:"h6"}} className={cardHeaderclass} title={header}/>
         <CardContent className="projectCardContent">
             <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} />
             <Typography className="cardDescription">{description}</Typography>

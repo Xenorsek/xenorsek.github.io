@@ -3,14 +3,34 @@
     flex-direction: column;
     gap:20px;
 }
+.about{
+    overflow:inherit;
+}
 
 .projectCard{
     margin-top: 20px;
     padding:20px;
-    
-    &.showOnPage{
-        animation-duration: 1s;
-        animation-name: example;
+    position:relative;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover{
+        box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    &.left, &.right {
+        .projectCardCarousel{
+            opacity: 0;
+            animation: fadeIn 0.7s ease forwards;
+            animation-delay: 0.5s;
+        }
+    }
+    &.left{
+        animation: fromLeftToCenter 0.5s ease forwards;
+        
+    }
+
+    &.right{
+        animation: fromRightToCenter 0.5s ease forwards;
     }
 }
 
@@ -28,24 +48,52 @@
 }
 
 .projectCardCarousel{
-    &.right{
-        margin-top:-60px;
-        float:right;
-        margin-left:30px;
+    transition: transform 0.5s ease;
+
+    @media (min-width: 768px){
+        &.right{
+            margin-top:-60px;
+            float:right;
+            margin-left:30px;
+        }
+        
+        &.left{
+            margin-top:-60px;
+            float:left;
+            margin-right:30px;        
+        }
     }
     
-    &.left{
-        margin-top:-60px;
-        float:left;
-        margin-right:30px;        
+    &:hover{
+        transform: scale(1.15);
     }
 }
 
-@keyframes example {
+@keyframes fromLeftToCenter {
     from {
-        margin-left:500px;
+        transform: translateX(-100%);
     }
     to {
-        margin-left:0px;
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes fromRightToCenter {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity:1;
+        
     }
   }
