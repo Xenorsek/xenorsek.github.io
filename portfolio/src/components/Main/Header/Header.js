@@ -6,25 +6,26 @@ const Header = ({fetchMoreData, componentsNames}) => {
     const scrollToSection = (section) => {
         setAnchorEl(null);
         if(componentsNames[section].visible){
-            scroller.scrollTo(componentsNames[section].name, {
-                duration: 800,
-                delay: 0,
-                smooth: 'easeInOutQuart',
-            });
+            scrollToElement(componentsNames[section].name)
         }
         else{
             fetchMoreData(section);
             setTimeout(() => {
-                scroller.scrollTo(componentsNames[section].name, {
-                    duration: 800,
-                    delay: 0,
-                    smooth: 'easeInOutQuart',
-                });
+                scrollToElement(componentsNames[section].name)
             }, 500)
             
         }
       };
 
+    const scrollToElement = (sectionName) =>{
+        const offset = 80;
+        scroller.scrollTo(sectionName, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            offset: -offset
+        });
+    }
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
