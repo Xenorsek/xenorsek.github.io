@@ -29,12 +29,14 @@ function Main() {
     }
 
     const components = [<About/>, <Skills/>, <Projects/>, <Experience/>, <Footer/>]
-    const [items, setItems] = useState(components.slice(0,4));
+    const [items, setItems] = useState(components.slice(0,3));
 
     const fetchMoreData = (index = 0 ) => {
-        console.log("Is fatching")
         if(index !== 0 ){
             setItems([...items, ...components.slice(items.length, index + 1)])
+            for(let i = 0; i <= index; i++){
+                handleChangeComponents(i, true);
+            }
         }
         else{
             if(components.length > items.length){

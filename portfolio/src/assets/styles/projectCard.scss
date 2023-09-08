@@ -35,9 +35,12 @@
 }
 
 .cardHeader{
-    &.left{
-        text-align: right;
+    @media (min-width: 768px) {
+        &.left{
+            text-align: right;
+        }
     }
+
     &.right{
         left:left;
     }
