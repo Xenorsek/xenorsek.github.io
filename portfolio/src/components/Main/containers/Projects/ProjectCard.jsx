@@ -1,7 +1,7 @@
 import { Card, CardActions, CardContent, CardHeader, Collapse, IconButton, Link, Typography } from "@mui/material";
 import SwipeableTextMobileStepper from "../../../custom/AutoPlaySwipeableViews ";
 import { useEffect, useRef, useState } from "react";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {ExpandLess, ExpandMore} from '@mui/icons-material';
 const ProjectCard = ({alignItems}) => {
     const header = "Delivery Driver";
     const description = "Moja fascynacja programowaniem zaczęła się, gdy po raz pierwszy zetknąłem się z C#. Ta wszechstronna i potężna technologia zapoczątkowała moją przygodę z .NET, a od tego czasu nie patrzyłem już wstecz. Pracując w różnych projektach, od małych startupów po duże przedsiębiorstwa, zdobyłem cenne doświadczenie w projektowaniu, rozwijaniu i utrzymaniu aplikacji na platformie .NET.";
@@ -76,7 +76,7 @@ const ProjectCard = ({alignItems}) => {
             aria-expanded={expanded}
             aria-label="show more"
           >
-            <ExpandMoreIcon />
+            {expanded ? <ExpandLess /> : <ExpandMore />}
           </IconButton>
         </CardActions>
         <Collapse className={collapseClass} in={expanded} timeout="auto" unmountOnExit>
