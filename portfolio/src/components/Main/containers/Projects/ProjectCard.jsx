@@ -71,7 +71,6 @@ const ProjectCard = ({alignItems}) => {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton
-            expand={expanded}
             onClick={handleExpandClick}
             aria-expanded={expanded}
             aria-label="show more"

@@ -22,7 +22,6 @@ function Projects(){
                 titleTypographyProps={{variant:"h6"}}
                 action={
                     <IconButton
-                        expand={expanded}
                         onClick={handleExpandClick}
                         aria-expanded={expanded}
                         aria-label="show more"
@@ -33,7 +32,6 @@ function Projects(){
                 }
                 />
 
-                
                 <Collapse className="projectsCardContainer" in={expanded} timeout="auto" unmountOnExit>
                     <ProjectCard alignItems="right" />
                     <ProjectCard alignItems="left" />
