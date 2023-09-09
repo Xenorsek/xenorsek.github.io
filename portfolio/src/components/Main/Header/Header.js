@@ -12,8 +12,7 @@ const Header = ({fetchMoreData, componentsNames}) => {
             fetchMoreData(section);
             setTimeout(() => {
                 scrollToElement(componentsNames[section].name)
-            }, 500)
-            
+            }, 100)
         }
       };
 
