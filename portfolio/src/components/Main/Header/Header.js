@@ -62,10 +62,12 @@ const Header = ({fetchMoreData, componentsNames}) => {
         setAnchorElPageSettings(null);
     };
 
-    const handleChangeDarkMode = (event) => {
-        setDarkMode(event.target.checked);
+    const handleChangeDarkMode = () => {
+        setDarkMode((prev) => {
+            localStorage.setItem("darkmode", !prev);
+            return !prev;
+        });
         colorMode.toggleColorMode();
-        localStorage.setItem("darkmode", event.target.checked);
 
     }
 
@@ -133,7 +135,7 @@ return (
             'aria-labelledby': 'basic-button',
             }}
         >
-            <MenuItem>Dark mode <Switch checked={darkMode} onChange={handleChangeDarkMode}/></MenuItem>                
+            <MenuItem onClick={handleChangeDarkMode}>Dark mode <Switch checked={darkMode}/></MenuItem>                
         </Menu>
     </AppBar>
 )
