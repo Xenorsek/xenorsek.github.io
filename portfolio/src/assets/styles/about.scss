@@ -1,0 +1,12 @@
+.about{
+    .aboutImage{
+        width:280px;
+        margin:0 10px 10px 10px;
+        @media (min-width: 768px){
+            float:right;
+        }
+    }
+    .aboutTypo{
+        text-align: justify;
+    }
+}

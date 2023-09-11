@@ -1,22 +1,22 @@
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
-
+import { Card, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
+import img from "../../../../assets/images/omnie.jpg";
+import {AboutContent, PassionContent} from "../../../../assets/content/content";
 function About(){
     return (
-        <div className="About">
-            <Card>
+        <Card className="about">
             <CardContent>
-                <Typography> 
-                    Witaj! Nazywam się Marcin Kozłowski, i jestem pasjonatem tworzenia aplikacji i rozwiązań opartych na technologii .NET. Moja przygoda z programowaniem rozpoczęła się wiele lat temu, i od tego czasu nieustannie doskonalę swoje umiejętności, aby dostarczać innowacyjne i efektywne rozwiązania dla klientów i użytkowników.
+                <CardMedia className="aboutImage" component="img" image={img} alt="about me" />
+                <Typography className="aboutTypo">
+                    {AboutContent}
                 </Typography>
             </CardContent>
-            <CardHeader title="Moja historia"/>            
+            <CardHeader title="Pasja w Kodowaniu"/>            
             <CardContent>
                 <Typography> 
-                    Moja fascynacja programowaniem zaczęła się, gdy po raz pierwszy zetknąłem się z C#. Ta wszechstronna i potężna technologia zapoczątkowała moją przygodę z .NET, a od tego czasu nie patrzyłem już wstecz. Pracując w różnych projektach, od małych startupów po duże przedsiębiorstwa, zdobyłem cenne doświadczenie w projektowaniu, rozwijaniu i utrzymaniu aplikacji na platformie .NET.
+                    {PassionContent}
                 </Typography> 
             </CardContent>
-            </Card>
-        </div>
+        </Card>
     )
 }
 
