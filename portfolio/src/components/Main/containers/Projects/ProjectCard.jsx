@@ -63,7 +63,7 @@ const ProjectCard = ({header, description, link, repositoryName, repositoryUsern
         
         <Collapse className={collapseClass} in={expanded} timeout="auto" unmountOnExit>
               { repositoryStats && 
-                <Link href={repositoryLink}>
+                <Link href={repositoryLink} target="_blank">
                   <img src={repositoryStats} alt="github readme stats" /> 
                 </Link> 
               }

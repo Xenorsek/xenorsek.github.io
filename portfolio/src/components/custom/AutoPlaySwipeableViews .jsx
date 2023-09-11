@@ -55,13 +55,7 @@ const SwipeableTextMobileStepper= ({className = "carousel", images, showControls
               {Math.abs(activeStep - index) <= 2 ? (
                 <Box
                   component="img"
-                  sx={{
-                    height: 255,
-                    display: 'block',
-                    maxWidth: 400,
-                    overflow: 'hidden',
-                    width: '100%',
-                  }}
+                  className='autoplaySwipeableCarousel'
                   src={step.imgPath}
                   alt={step.label}
                 />

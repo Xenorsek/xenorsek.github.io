@@ -36,13 +36,10 @@ const ProjectsCategory = ({projects, categoryName, isExpanded}) =>{
                             repositoryName={project.repositoryName}
                             repositoryUsername={project.repositoryUsername}
                             images={project.images}
-                            alignItems={index % 2 == 0 ? "right" : "left"}
+                            alignItems={index % 2 === 0 ? "right" : "left"}
                         />        
                     ))
                 }
-                {/* <ProjectCard alignItems="right" />
-                <ProjectCard alignItems="left" />
-                <ProjectCard alignItems="right" /> */}
             </Collapse>
         </>
     )
