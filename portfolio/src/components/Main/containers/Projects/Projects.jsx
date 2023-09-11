@@ -1,13 +1,7 @@
-import { Card, CardContent, CardHeader, Collapse, Divider, IconButton, Typography } from "@mui/material";
-import ProjectCard from "./ProjectCard";
-import {ExpandLess, ExpandMore} from '@mui/icons-material';
-import { useState } from "react";
-
+import { Card, CardContent, CardHeader, Divider, Typography } from "@mui/material";
+import ProjectsCategory from "./ProjectsCategory";
+import { reactProjects } from "../../../../assets/content/content";
 function Projects(){
-    const [expanded, setExpanded] = useState(true);
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-      };
 
     return (
         <Card className="about">
@@ -17,26 +11,7 @@ function Projects(){
                 W mojej karierze miałem przyjemność pracować nad różnorodnymi projektami. Niezależnie od skali projektu, zawsze staram się dostarczyć rozwiązania, które przynoszą wartość i zadowolenie klientom. Kilka z moich projektów można zobaczyć w sekcji portfolio.
                 </Typography> 
                 <Divider sx={{marginTop:"20px", marginBottom:"20px"}}/>
-                <CardHeader 
-                title="Unity Game Developing" 
-                titleTypographyProps={{variant:"h6"}}
-                action={
-                    <IconButton
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
-                        aria-label="show more"
-                    >
-                        {expanded ? <ExpandLess /> : <ExpandMore />}
-                        
-                    </IconButton>
-                }
-                />
-
-                <Collapse className="projectsCardContainer" in={expanded} timeout="auto" unmountOnExit>
-                    <ProjectCard alignItems="right" />
-                    <ProjectCard alignItems="left" />
-                    <ProjectCard alignItems="right" />
-                </Collapse>
+                <ProjectsCategory  categoryName="React" projects={reactProjects} isExpanded />
             </CardContent>
         </Card>
     )

@@ -2,35 +2,14 @@ import { Card, CardActions, CardContent, CardHeader, Collapse, IconButton, Link,
 import SwipeableTextMobileStepper from "../../../custom/AutoPlaySwipeableViews ";
 import { useEffect, useRef, useState } from "react";
 import {ExpandLess, ExpandMore} from '@mui/icons-material';
-const ProjectCard = ({alignItems}) => {
-    const header = "Delivery Driver";
-    const description = "Moja fascynacja programowaniem zaczęła się, gdy po raz pierwszy zetknąłem się z C#. Ta wszechstronna i potężna technologia zapoczątkowała moją przygodę z .NET, a od tego czasu nie patrzyłem już wstecz. Pracując w różnych projektach, od małych startupów po duże przedsiębiorstwa, zdobyłem cenne doświadczenie w projektowaniu, rozwijaniu i utrzymaniu aplikacji na platformie .NET.";
+const ProjectCard = ({header, description, link, repositoryName, repositoryUsername = "xenorsek", images, alignItems}) => {
     const carouselClass = "projectCardCarousel " + alignItems;
     const cardHeaderClass = "cardHeader " + alignItems;
     const collapseClass = "collapseCard " + alignItems;
-    const images = [
-        {
-          label: 'San Francisco – Oakland Bay Bridge, United States',
-          imgPath:
-            'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-        },
-        {
-          label: 'Bird',
-          imgPath:
-            'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-        },
-        {
-          label: 'Bali, Indonesia',
-          imgPath:
-            'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-        },
-        {
-          label: 'Goč, Serbia',
-          imgPath:
-            'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-        },
-      ];
-      
+    const repositoryStats = repositoryName ? `https://github-readme-stats.vercel.app/api/pin/?username=${repositoryUsername}&repo=${repositoryName}&theme=dark` : null;
+    const repositoryLink = link ? link : `https://github.com/${repositoryUsername}/${repositoryName}`
+    const isCollapse = repositoryName != null;
+
     const projectCardRef = useRef(null);
     const [expanded, setExpanded] = useState(false);
 
@@ -64,28 +43,33 @@ const ProjectCard = ({alignItems}) => {
 
     return (
       <Card ref={projectCardRef} className={scroll ? "projectCard " + alignItems : "projectCard"}>
-        <CardHeader titleTypographyProps={{variant:"h6"}} className={cardHeaderClass} title={header}/>
+        { header && <CardHeader titleTypographyProps={{variant:"h6"}} className={cardHeaderClass} title={header}/> }
         <CardContent className="projectCardContent">
-            <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} />
-            <Typography className="cardDescription">{description}</Typography>
+            {images && <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} /> }
+            { description && <Typography className="cardDescription">{description}</Typography> }
         </CardContent>
-        <CardActions disableSpacing>
-          <IconButton
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            {expanded ? <ExpandLess /> : <ExpandMore />}
-          </IconButton>
+
+        {isCollapse && 
+          <CardActions disableSpacing>
+            <IconButton
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              {expanded ? <ExpandLess /> : <ExpandMore />}
+            </IconButton>
         </CardActions>
+        }
+        
         <Collapse className={collapseClass} in={expanded} timeout="auto" unmountOnExit>
-          <Link href="https://github.com/Xenorsek/DeliveryDriver">
-              <img src="https://github-readme-stats.vercel.app/api/pin/?username=xenorsek&repo=deliverydriver&theme=dark" alt="github readme stats" />
-            </Link>
+              { repositoryStats && 
+                <Link href={repositoryLink}>
+                  <img src={repositoryStats} alt="github readme stats" /> 
+                </Link> 
+              }
+
+            
         </Collapse>
-        <CardActions>
-          
-        </CardActions>
     </Card>
       )}
 export default ProjectCard;
