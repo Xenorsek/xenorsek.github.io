@@ -1,15 +1,15 @@
-import { Card, CardActions, CardContent, CardHeader, Collapse, IconButton, Link, Typography } from "@mui/material";
+import { Card, CardActions, CardContent, CardHeader, Collapse, IconButton, Link, Tooltip, Typography } from "@mui/material";
 import SwipeableTextMobileStepper from "../../../custom/AutoPlaySwipeableViews ";
 import { useEffect, useRef, useState } from "react";
-import {ExpandLess, ExpandMore} from '@mui/icons-material';
-const ProjectCard = ({header, description, link, repositoryName, repositoryUsername = "xenorsek", images, alignItems}) => {
+import { GitHub, Web } from '@mui/icons-material';
+const ProjectCard = ({header, description, demoLink, repositoryName, repositoryUsername = "xenorsek", images, alignItems}) => {
     const carouselClass = "projectCardCarousel " + alignItems;
     const cardHeaderClass = "cardHeader " + alignItems;
     const collapseClass = "collapseCard " + alignItems;
     const repositoryStats = repositoryName ? `https://github-readme-stats.vercel.app/api/pin/?username=${repositoryUsername}&repo=${repositoryName}&theme=dark` : null;
-    const repositoryLink = link ? link : `https://github.com/${repositoryUsername}/${repositoryName}`
+    const repositoryLink = repositoryName ? `https://github.com/${repositoryUsername}/${repositoryName}` : null;
     const isCollapse = repositoryName != null;
-
+    const isCardActions = demoLink || isCollapse;
     const projectCardRef = useRef(null);
     const [expanded, setExpanded] = useState(false);
 
@@ -48,27 +48,31 @@ const ProjectCard = ({header, description, link, repositoryName, repositoryUsern
             {images && <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} /> }
             { description && <Typography className="cardDescription">{description}</Typography> }
         </CardContent>
-
-        {isCollapse && 
-          <CardActions disableSpacing>
-            <IconButton
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              {expanded ? <ExpandLess /> : <ExpandMore />}
-            </IconButton>
-        </CardActions>
-        }
+        {isCardActions && <CardActions disableSpacing>
+          {isCollapse && 
+          <Tooltip title="Github">
+                <IconButton
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <GitHub />
+                </IconButton>
+              </Tooltip>
+          }
+          { demoLink && 
+          <Tooltip title="Demo">
+            <Link href={demoLink} target="_blank"><IconButton><Web /></IconButton></Link> 
+          </Tooltip>
+          }
+        </CardActions>}
         
         <Collapse className={collapseClass} in={expanded} timeout="auto" unmountOnExit>
               { repositoryStats && 
                 <Link href={repositoryLink} target="_blank">
                   <img src={repositoryStats} alt="github readme stats" /> 
                 </Link> 
-              }
-
-            
+              }            
         </Collapse>
     </Card>
       )}

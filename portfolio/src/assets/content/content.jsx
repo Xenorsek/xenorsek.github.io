@@ -10,20 +10,20 @@ export const reactProjects = [
     {
         header: "Music converter",
         description: "Aplikacja wykorzystująca AI do konwertowania plików audio na typ danych musicSequence. Aplikacja pozwala na wczytanie pliku audio lub wyprowadzonego z mikrofonu. W aplikacji znajdziemy bibliotekę, w której istnieją przykładowe pliki muzyczne. Po utworzeniu konta możemy dodawać i polubić utwory.",
-        link:"https://music-converter-6012d.firebaseapp.com/",
+        demoLink:"https://music-converter-6012d.firebaseapp.com/",
         repositoryUsername: "xenorsek",
         repositoryName: "PracowniaDyplomowa",
         images: [
             {
-              label: 'San Francisco – Oakland Bay Bridge, United States',
+              label: 'Strona główna',
               imgPath: musicConverter
             },
             {
-              label: 'Bird',
+              label: 'Biblioteka',
               imgPath:musicConverter1,
             },
             {
-              label: 'Bali, Indonesia',
+              label: 'MusicSequence',
               imgPath:musicConverter2
             },
           ],

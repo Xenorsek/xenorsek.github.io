@@ -32,7 +32,7 @@ const ProjectsCategory = ({projects, categoryName, isExpanded}) =>{
                             key={index}
                             header = {project.header}
                             description={project.description}
-                            link={project.link}
+                            demoLink={project.demoLink}
                             repositoryName={project.repositoryName}
                             repositoryUsername={project.repositoryUsername}
                             images={project.images}
