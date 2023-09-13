@@ -2,7 +2,7 @@ import { Card, CardActions, CardContent, CardHeader, Collapse, IconButton, Link,
 import SwipeableTextMobileStepper from "../../../custom/AutoPlaySwipeableViews ";
 import { useEffect, useRef, useState } from "react";
 import { GitHub, Web } from '@mui/icons-material';
-const ProjectCard = ({header, description, demoLink, repositoryName, repositoryUsername = "xenorsek", images, alignItems}) => {
+const ProjectCard = ({header, description, demoLink, repositoryName, repositoryUsername = "xenorsek", images, alignItems, imageWidth, imageHeight}) => {
     const carouselClass = "projectCardCarousel " + alignItems;
     const cardHeaderClass = "projectCardHeader " + alignItems;
     const collapseClass = "collapseCard " + alignItems;
@@ -45,7 +45,7 @@ const ProjectCard = ({header, description, demoLink, repositoryName, repositoryU
       <Card ref={projectCardRef} className={scroll ? "projectCard " + alignItems : "projectCard"}>
         { header && <CardHeader titleTypographyProps={{variant:"h6"}} className={cardHeaderClass} title={header}/> }
         <CardContent className="projectCardContent">
-            {images && <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} /> }
+            {images && <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} width={imageWidth} height={imageHeight} /> }
             { description && <Typography className="projectCardDescription">{description}</Typography> }
         </CardContent>
         {isCardActions && <CardActions disableSpacing>

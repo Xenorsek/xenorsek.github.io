@@ -36,6 +36,8 @@ const ProjectsCategory = ({projects, categoryName, isExpanded}) =>{
                             repositoryName={project.repositoryName}
                             repositoryUsername={project.repositoryUsername}
                             images={project.images}
+                            imageWidth={project.imageWidth}
+                            imageHeight={project.imageHeight}
                             alignItems={index % 2 === 0 ? "right" : "left"}
                         />        
                     ))

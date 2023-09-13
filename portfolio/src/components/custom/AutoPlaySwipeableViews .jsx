@@ -11,7 +11,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-const SwipeableTextMobileStepper= ({className = "carousel", images, showControls = true, showTitle = true }) => {
+const SwipeableTextMobileStepper = ({className = "carousel", images, showControls = true, showTitle = true, width, height}) => {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = images.length;
@@ -57,6 +57,8 @@ const SwipeableTextMobileStepper= ({className = "carousel", images, showControls
                   component="img"
                   className='autoplaySwipeableCarousel'
                   src={step.imgPath}
+                  height={height}
+                  width={width}
                   alt={step.label}
                 />
               ) : null}

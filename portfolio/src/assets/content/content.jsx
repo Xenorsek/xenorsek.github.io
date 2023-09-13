@@ -27,10 +27,12 @@ export const reactProjects = [
               imgPath:musicConverter2
             },
           ],
+          imageWidth:'400px',
+          imageHeight:'200px',
     }
 ];
 
-export const proffesionalProjects = [
+export const professionalProjects = [
     {
         header: "Developer Capacity Management Tool",
         description: "DCMT jest systemem do głównego zarządzania kompetencjami i projektami w firmie.",
