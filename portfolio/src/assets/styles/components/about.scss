@@ -1,7 +1,4 @@
 .aboutCard{
-    position:relative;
-    transition: top 600ms ease, opacity 600ms ease;
-
     .aboutImage{
         width:280px;
         margin:0 10px 10px 10px;
@@ -11,25 +8,5 @@
     }
     .aboutTypo{
         text-align: justify;
-    }
-
-    :after{
-        top:65%;
-        opacity:0;
-        background: linear-gradient(
-            transparent,
-            mediumslateblue,
-            transparent
-        );
-        height:auto;
-        width:10px;
-        position:absolute;
-        left: -1px;
-        top:65%;
-        content:"";
-    }
-    :hover:after{
-        top:25%;
-        opacity:1;
     }
 }

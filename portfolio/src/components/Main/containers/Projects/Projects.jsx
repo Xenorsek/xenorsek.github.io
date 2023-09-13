@@ -4,7 +4,7 @@ import { reactProjects, proffesionalProjects } from "../../../../assets/content/
 function Projects(){
 
     return (
-        <Card className="projects">
+        <Card className="projects gradient-card">
             <CardHeader title="Projekty"/> 
             <CardContent>
                 <Typography> 
