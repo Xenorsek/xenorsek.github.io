@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { GitHub, Web } from '@mui/icons-material';
 const ProjectCard = ({header, description, demoLink, repositoryName, repositoryUsername = "xenorsek", images, alignItems}) => {
     const carouselClass = "projectCardCarousel " + alignItems;
-    const cardHeaderClass = "cardHeader " + alignItems;
+    const cardHeaderClass = "projectCardHeader " + alignItems;
     const collapseClass = "collapseCard " + alignItems;
     const repositoryStats = repositoryName ? `https://github-readme-stats.vercel.app/api/pin/?username=${repositoryUsername}&repo=${repositoryName}&theme=dark` : null;
     const repositoryLink = repositoryName ? `https://github.com/${repositoryUsername}/${repositoryName}` : null;
@@ -46,7 +46,7 @@ const ProjectCard = ({header, description, demoLink, repositoryName, repositoryU
         { header && <CardHeader titleTypographyProps={{variant:"h6"}} className={cardHeaderClass} title={header}/> }
         <CardContent className="projectCardContent">
             {images && <SwipeableTextMobileStepper className={carouselClass} images={images} showControls={false} showTitle={false} /> }
-            { description && <Typography className="cardDescription">{description}</Typography> }
+            { description && <Typography className="projectCardDescription">{description}</Typography> }
         </CardContent>
         {isCardActions && <CardActions disableSpacing>
           {isCollapse && 

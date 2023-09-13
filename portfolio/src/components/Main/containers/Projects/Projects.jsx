@@ -4,7 +4,7 @@ import { reactProjects, proffesionalProjects } from "../../../../assets/content/
 function Projects(){
 
     return (
-        <Card className="about">
+        <Card className="projects">
             <CardHeader title="Projekty"/> 
             <CardContent>
                 <Typography> 

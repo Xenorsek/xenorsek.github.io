@@ -1,82 +1,83 @@
-.projectsCardContainer{
-    display:flex;
-    flex-direction: column;
-    gap:20px;
-}
-.about{
-    overflow:inherit;
-}
-
-.projectCard{
-    margin-top: 20px;
-    padding:20px;
-    position:relative;
-    transition: box-shadow 0.3s ease-in-out;
-
-    &:hover{
-        box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3) !important;
-    }
-
-    &.left, &.right {
-        .projectCardCarousel{
-            opacity: 0;
-            animation: fadeIn 0.7s ease forwards;
-            animation-delay: 0.5s;
-        }
-    }
-    &.left{
-        animation: fromLeftToCenter 0.5s ease forwards;
+.projects{
+    .projectsCardContainer{
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        .projectCard{
+            margin-top: 20px;
+            padding:20px;
+            position:relative;
+            transition: box-shadow 0.3s ease-in-out;
         
-    }
-
-    &.right{
-        animation: fromRightToCenter 0.5s ease forwards;
-    }
-}
-
-.cardHeader{
-    @media (min-width: 780px) {
-        &.left{
-            text-align: right;
-        }
-    }
-
-    &.right{
-        left:left;
-    }
-}
-
-.cardDescription{
-    text-align: justify;
-}
-
-.projectCardCarousel{
-    transition: transform 0.5s ease;
-
-    @media (min-width: 780px){
-        &.right{
-            margin-top:-60px;
-            float:right;
-            margin-left:30px;
-        }
+            &:hover{
+                box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3) !important;
+            }
         
-        &.left{
-            margin-top:-60px;
-            float:left;
-            margin-right:30px;        
-        }
-    }
+            &.left, &.right {
+                .projectCardCarousel{
+                    opacity: 0;
+                    animation: fadeIn 0.7s ease forwards;
+                    animation-delay: 0.5s;
+                }
+            }
+            &.left{
+                animation: fromLeftToCenter 0.5s ease forwards;
+                
+            }
+        
+            &.right{
+                animation: fromRightToCenter 0.5s ease forwards;
+            }
+
+            .projectCardHeader{
+                @media (min-width: 780px) {
+                    &.left{
+                        text-align: right;
+                    }
+                }
+            
+                &.right{
+                    left:left;
+                }
+            }
+
+            .projectCardContent{
+                .projectCardDescription{
+                    text-align: justify;
+                }
     
-    &:hover{
-        transform: scale(1.15);
-    }
-}
-
-.collapseCard{
-    &.left{
-        text-align: right;
-    }
-    &.right{
-        text-align: left;
+                .projectCardCarousel{
+                    transition: transform 0.5s ease;
+                
+                    @media (min-width: 780px){
+                        &.right{
+                            margin-top:-60px;
+                            float:right;
+                            margin-left:30px;
+                        }
+                        
+                        &.left{
+                            margin-top:-60px;
+                            float:left;
+                            margin-right:30px;        
+                        }
+                    }
+                    
+                    &:hover{
+                        transform: scale(1.15);
+                    }
+                }
+            }
+            
+            .collapseCard{
+                &.left{
+                    text-align: right;
+                }
+                &.right{
+                    text-align: left;
+                }
+            }
+        }
+    
     }
 }
