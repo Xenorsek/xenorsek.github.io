@@ -3,9 +3,11 @@
 @import "components/projectCard";
 @import "components/experience";
 @import "components/about";
+
 @import "abstracts/variables";
 @import "abstracts/animations";
 
+@import "custom/gradient-card";
 
 .container{
     display:flex;
@@ -14,7 +16,7 @@
 }
 
 .MuiCard-root{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3) !important;
 }
 
 .autoplaySwipeableCarousel{
@@ -22,4 +24,8 @@
     max-width:400px;
     display:block;
     overflow:hidden;
+}
+
+.CardHeaderCenter{
+    text-align:center;
 }
