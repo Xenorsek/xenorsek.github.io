@@ -1,11 +1,11 @@
-@import "header";
-@import "footer";
-@import "variables";
-@import "container";
-@import "projectCard";
-@import "experience";
-@import "animations";
-@import "about";
+@import "components/header";
+@import "components/footer";
+@import "components/projectCard";
+@import "components/experience";
+@import "components/about";
+@import "abstracts/variables";
+@import "abstracts/animations";
+
 
 .container{
     display:flex;

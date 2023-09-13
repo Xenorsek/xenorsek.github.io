@@ -1,0 +1,28 @@
+.gradient-card{
+    position:relative;
+    transition: top 600ms ease, opacity 600ms ease;
+
+    :after{
+        background: linear-gradient(
+            transparent,
+            mediumslateblue,
+            transparent
+        );
+        height:auto;
+        width:10px;
+        position:absolute;
+        left: -1px;
+        top:65%;
+        content:"";
+    }
+
+    :after{
+        top:65%;
+        opacity:0;
+    }
+    
+    :hover:after{
+        top:25%;
+        opacity:1;
+    }
+}
