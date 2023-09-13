@@ -7,6 +7,41 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
+const getDesignTokens = (mode) => ({
+  palette: {
+    mode: mode === true ? "dark": "light",
+    ...(mode === true
+      ? {
+        //darkmode
+        primary: {
+          light: '#e2f5f8',
+          main: '#258ab3',
+          dark: '#185a7e',
+          primary: '#fff'
+        },
+        secondary:{
+          light:"#e1f3eb",
+          main:"#6c00b3",
+          dark:"#005029",
+          primary:'#fff',
+        }
+      }
+      : {
+        //lightmode
+          primary: {
+             main: "#6c00b3" 
+            },
+          secondary:{
+            main: "#0e5dc6"
+          },
+          text: {
+            primary: '#000',
+          },
+        }),
+  },
+});
+
+
 function App() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const selectedDarkMode = JSON.parse(localStorage.getItem("darkmode"));
@@ -28,27 +63,7 @@ function App() {
     }
   })
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: mode ? 'dark' : 'light',
-          primary: {
-            light: '#e2f5f8',
-            main: '#258ab3',
-            dark: '#185a7e',
-            contrastText: '#fff'
-          },
-          secondary:{
-            light:"#e1f3eb",
-            main:"#fff",
-            dark:"#005029",
-            contrastText:'#fff',
-          }
-        },
-      }),
-    [mode],
-  );
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
