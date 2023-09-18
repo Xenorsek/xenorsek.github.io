@@ -92,11 +92,10 @@ return (
                 </IconButton>
             </div>
             <div className="navigation">
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>                
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(1)}}>Umiejętności</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(2)}}>Projekty</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(3)}}>Doświadczenie</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(4)}}>Kontakt</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(1)}}>Projekty</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(2)}}>Doświadczenie</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(3)}}>Kontakt</Button>
                 <IconButton 
                     size="large"
                     edge="end"
