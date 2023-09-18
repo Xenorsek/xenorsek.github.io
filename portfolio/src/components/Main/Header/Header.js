@@ -10,6 +10,7 @@ const Header = ({fetchMoreData, componentsNames}) => {
     
     useEffect(()=>{
         const darkModeFromStorage = JSON.parse(localStorage.getItem("darkmode"));
+        
         if(darkModeFromStorage == null){
             setDarkMode(preferDarkMode)
         }
@@ -74,8 +75,8 @@ const Header = ({fetchMoreData, componentsNames}) => {
 return (
     <AppBar position="sticky" className='header'>
         <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Xenorsek!
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1, letterSpacing:3, fontWeight:600 }}>
+                Marcin Kozłowski
             </Typography>
             <div className='iconNavigation'>
                 <IconButton
