@@ -13,8 +13,8 @@ function Projects(){
                 <ProjectsCategory categoryName="Projekty zawodowe" projects={professionalProjects} isExpanded />
                 
                 <Divider sx={{marginTop:"20px", marginBottom:"20px"}}/>
-                <ProjectsCategory  categoryName="Projekty prywatne" projects={reactProjects} isExpanded />
-                <ProjectsCategory  categoryName="Unity" projects={UnityProjects} isExpanded={false} />
+                <ProjectsCategory  categoryName="Projekty prywatne" projects={reactProjects} isExpanded={false} />
+                <ProjectsCategory  categoryName="Projekty w Unity" projects={UnityProjects} isExpanded={false} />
             </CardContent>
         </Card>
     )
