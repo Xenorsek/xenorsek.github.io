@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfa1880a.css",
-    "main.js": "/static/js/main.b682c122.js",
+    "main.css": "/static/css/main.3ecc348b.css",
+    "main.js": "/static/js/main.b695924b.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/quizUnit3.png": "/static/media/quizUnit3.5edb4f53336ec33def93.png",
+    "static/media/quizUnit2.png": "/static/media/quizUnit2.dd0703da66d682defca7.png",
+    "static/media/quizUnit1.png": "/static/media/quizUnit1.5ea8567e192104f428e4.png",
+    "static/media/Snowboarder3.png": "/static/media/Snowboarder3.e1c898f32fd4bbb72910.png",
+    "static/media/Snowboarder1.png": "/static/media/Snowboarder1.90c8aa896b1327f6609d.png",
+    "static/media/Snowboarder2.png": "/static/media/Snowboarder2.88c8a67358cbb13ba935.png",
     "static/media/omnie.jpg": "/static/media/omnie.88772f0b21a70c9bac60.jpg",
     "static/media/musicConverter1.png": "/static/media/musicConverter1.6825957b0874be37aa77.png",
     "static/media/musicConverter.png": "/static/media/musicConverter.7a34141c5bdc7036c2f4.png",
     "static/media/musicConverter2.png": "/static/media/musicConverter2.a976d789725b21a720bd.png",
     "index.html": "/index.html",
-    "main.dfa1880a.css.map": "/static/css/main.dfa1880a.css.map",
-    "main.b682c122.js.map": "/static/js/main.b682c122.js.map",
+    "main.3ecc348b.css.map": "/static/css/main.3ecc348b.css.map",
+    "main.b695924b.js.map": "/static/js/main.b695924b.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfa1880a.css",
-    "static/js/main.b682c122.js"
+    "static/css/main.3ecc348b.css",
+    "static/js/main.b695924b.js"
   ]
 }
