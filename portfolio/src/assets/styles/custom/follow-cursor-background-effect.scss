@@ -1,6 +1,6 @@
 #follow-cursor-background-effect{
     background:linear-gradient(to right, aquamarine, mediumpurple) ;
-    height:500px;
+    height:200px;
     aspect-ratio: 1;
     position: absolute;
     left:50%;
@@ -8,6 +8,5 @@
     translate:-50% -50%;
     border-radius:50%;
     animation: rotate 20s infinite;
-    opacity:0.5;
-    filter:blur(200px);
+    filter:blur(100px);
 }
