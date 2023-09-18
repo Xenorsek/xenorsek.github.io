@@ -8,6 +8,7 @@
 @import "abstracts/animations";
 
 @import "custom/gradient-card";
+@import "custom/follow-cursor-background-effect";
 
 .container{
     display:flex;
@@ -29,3 +30,8 @@
 .CardHeaderCenter{
     text-align:center;
 }
+
+body{
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+   }

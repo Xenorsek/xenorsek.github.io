@@ -10,6 +10,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import About from "./containers/About/About";
 import Projects from "./containers/Projects/Projects";
 import Experience from "./containers/Experience/Experience";
+import FollowCursorBackgroundEffect from "../custom/FollowCursorBackgroundEffect";
 
 function Main() {
     const [hasMore, setHasMore] = useState(true);
@@ -49,26 +50,29 @@ function Main() {
       };
 
     return(
-        <Container>
-            <Header componentsNames={componentsNames} fetchMoreData={fetchMoreData}  />
-            <InfiniteScroll
-                dataLength={items.length}
-                next={fetchMoreData}
-                hasMore={hasMore}
-                loader={<h4>Ładowanie...</h4>}
-            >
-                <Box className="container">
-                    {items.map((item, index) => (
-                    <Element name={componentsNames[index].name} key={index}>{item}</Element>
-                    ))}
-                </Box>
-            </InfiniteScroll>
-            <ScrollTop>
-                <Fab size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
-        </Container>
+        <>
+            <FollowCursorBackgroundEffect />
+            <Container>
+                <Header componentsNames={componentsNames} fetchMoreData={fetchMoreData}  />
+                <InfiniteScroll
+                    dataLength={items.length}
+                    next={fetchMoreData}
+                    hasMore={hasMore}
+                    loader={<h4>Ładowanie...</h4>}
+                >
+                    <Box className="container">
+                        {items.map((item, index) => (
+                        <Element name={componentsNames[index].name} key={index}>{item}</Element>
+                        ))}
+                    </Box>
+                </InfiniteScroll>
+                <ScrollTop>
+                    <Fab size="small" aria-label="scroll back to top">
+                        <KeyboardArrowUpIcon />
+                    </Fab>
+                </ScrollTop>
+            </Container>
+        </>
     );
 }
 
