@@ -14,7 +14,7 @@ function Courses(){
                             title="Learn Unity in C# & Code your First Five 2D Video Games for Web, Mac & PC. The Tutorials Cover Tilemap. GameDev.tv"
                             icon={<Gamepad color="success"/>}
                         />
-                        <Course progress={90}
+                        <Course progress={100}
                             color="secondary"
                             title="Praktyczny kurs ASP.NET Core REST Web API od podstaw (C#). Jakub Kozera"
                             icon={<Language color="secondary"/>}
