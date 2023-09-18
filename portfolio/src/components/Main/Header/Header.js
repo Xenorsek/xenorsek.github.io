@@ -93,9 +93,8 @@ return (
             </div>
             <div className="navigation">
                 <Button color="inherit" variant="text" onClick={()=>{scrollToSection(0)}}>O mnie</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(1)}}>Projekty</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(2)}}>Doświadczenie</Button>
-                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(3)}}>Kontakt</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(1)}}>Doświadczenie</Button>
+                <Button color="inherit" variant="text" onClick={()=>{scrollToSection(2)}}>Projekty</Button>
                 <IconButton 
                     size="large"
                     edge="end"
@@ -119,11 +118,9 @@ return (
             'aria-labelledby': 'basic-button',
             }}
         >
-            <MenuItem onClick={()=>{scrollToSection(0)}}>O mnie</MenuItem>                
-            <MenuItem onClick={()=>{scrollToSection(1)}}>Umiejętności</MenuItem>
+            <MenuItem onClick={()=>{scrollToSection(0)}}>O mnie</MenuItem>             
+            <MenuItem onClick={()=>{scrollToSection(1)}}>Doświadczenie</MenuItem>
             <MenuItem onClick={()=>{scrollToSection(2)}}>Projekty</MenuItem>
-            <MenuItem onClick={()=>{scrollToSection(3)}}>Doświadczenie</MenuItem>
-            <MenuItem onClick={()=>{scrollToSection(4)}}>Kontakt</MenuItem>
         </Menu>
         <Menu
             id="page-settings-menu"

@@ -1,4 +1,3 @@
-import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import { Box, Container } from "@mui/material";
 import React, { useState } from 'react';
@@ -16,9 +15,8 @@ function Main() {
     const [hasMore, setHasMore] = useState(true);
     const [componentsNames, setComponentsNames] = useState([
         {name: "About", visible: true},
+        {name: "Experience", visible: true},
         {name: "Projects", visible: true},
-        {name: "Experience", visible: false},
-        {name: "Footer", visible: false}
     ]);
 
     const handleChangeComponents = (index, visible) => {
@@ -27,8 +25,8 @@ function Main() {
         setComponentsNames(arr);
     }
 
-    const components = [<About/>, <Projects/>, <Experience/>, <Footer/>]
-    const [items, setItems] = useState(components.slice(0,2));
+    const components = [<About/>, <Experience/>, <Projects/>]
+    const [items, setItems] = useState(components.slice(0,3));
 
     const fetchMoreData = (index = 0 ) => {
         if(index !== 0 ){
