@@ -2,6 +2,12 @@ import ReactIcon from "../../components/custom/ReactIcon";
 import musicConverter from "../images/musicConverter.png";
 import musicConverter1 from "../images/musicConverter1.png";
 import musicConverter2 from "../images/musicConverter2.png";
+import quizUnit1 from "../images/quizUnit1.png";
+import quizUnit2 from "../images/quizUnit2.png";
+import quizUnit3 from "../images/quizUnit3.png";
+import Snowboarder1 from "../images/Snowboarder1.png";
+import Snowboarder2 from "../images/Snowboarder2.png";
+import Snowboarder3 from "../images/Snowboarder3.png";
 
 export const AboutContent = "Witaj! Nazywam się Marcin Kozłowski. Jestem absolwentem studiów informatycznych. Już w technikum informatycznym rozwijałem swoje umiejętności programowania. Polubiłem szczególnie dwie technologie, którymi są .NET i React. Od 2021 roku zajmuję się projektowaniem i tworzeniem oprogramowania zawodowo.";
 
@@ -53,13 +59,41 @@ export const UnityProjects = [
     header:"QuizUnit",
     description:"QuizUnit - jest to gra utworzona w Unity, której przebieg gry oparty jest o Quiz. Pytania zostały dobrane tak by przypominały o podstawie tworzenia gier w Unity. Quiz składał się z 3 scen: Start - Gra - Ekran końcowy. Podczas gry użytkownik musiał odpowiedzieć na pytanie z limitem czasu. Pytania są generowane losowo co utrudnia, użytkownikowi strzelanie. Po odpowiedzeniu na wszystkie pytania, użytkownik witał się z ekranem końcowym, na którym pokazany był jego wynik, oraz przycisk umożliwiający przejście gry ponownie.",
     repositoryUsername:"Xenorsek",
-    repositoryName:"QuizUnit"
+    repositoryName:"QuizUnit",
+    images: [
+      {
+        label: 'Ekran start',
+        imgPath: quizUnit1
+      },
+      {
+        label: 'Ekran gra',
+        imgPath:quizUnit2,
+      },
+      {
+        label: 'Ekran koniec',
+        imgPath:quizUnit3
+      },
+    ],
   },
   {
     header:"Snowboarder",
     description:"Snowboarder jest grą, w której użytkownik wciela się w snowboardzistę, który zjeżdża po stoku tak by dotrzeć do mety. Musi uważać na przeszkody oraz na swoją głowę, która jest jego punktem krytycznym. Gracz może przekręcać postać i przyśpieszać podczas jazdy po śniegu tak aby uniknąć przeszkody i ukończyć stok w jak najlepszym stanie oraz o dobrym czasie.",
     repositoryUsername:"Xenorsek",
-    repositoryName:"Snowboarder"
+    repositoryName:"Snowboarder",
+    images: [
+      {
+        label: 'Snowboarder',
+        imgPath: Snowboarder1
+      },
+      {
+        label: 'Snowboarder',
+        imgPath:Snowboarder2,
+      },
+      {
+        label: 'Snowboarder',
+        imgPath:Snowboarder3
+      },
+    ],
   }
 ];
 
