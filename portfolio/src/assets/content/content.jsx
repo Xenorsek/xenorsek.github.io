@@ -1,3 +1,4 @@
+import ReactIcon from "../../components/custom/ReactIcon";
 import musicConverter from "../images/musicConverter.png";
 import musicConverter1 from "../images/musicConverter1.png";
 import musicConverter2 from "../images/musicConverter2.png";
@@ -35,11 +36,31 @@ export const reactProjects = [
 export const professionalProjects = [
     {
         header: "Developer Capacity Management Tool",
-        description: "DCMT jest systemem do głównego zarządzania kompetencjami i projektami w firmie.",
+        description: "DCMT jest systemem do głównego zarządzania kompetencjami i projektami w firmie. Aplikacja wykorzystuje .NET 6.0 + React wykorzystując Azure portal i synchronizowała się z AD. Praca była w metodologii Scrum. Właściciele projektów mogli przypisywać osoby do konkretnych stanowisk i ról w projekcie. Generowane były kody projektowe, które umożliwiały następnie rejestrowanie godzin dla pracownika. Użytkownicy otrzymywali powiadomienia o zmianach statusów ich przypisania bądź o projektach, w których się znajdowali.",
     },
     {
         header: "Interview Scheduler",
-        description: "Interview Scheduler jest aplikacją webową w technologiach .NET Angular z serwisami Azure Portal. Aplikacja wspomagała proces rekrutacyjny w firmie. Pozwalała monitorować proces rekrutacji i tworzyć spotkania techniczne.",
-    }
-
+        description: "Interview Scheduler jest aplikacją webową w technologiach .NET 6.0 + Angular z serwisami Azure Portal. Praca była w metodologii Scrum. Celem aplikacji była automatyzacja procesu rekrutacji w firmie. Aplikacja umożliwiała monitorowanie procesu rekrutacji i procesu walidacji przyszłych pracowników po przez tworzenie i przypisywanie spotkania technicznego do wykwalifikowanego pracownika z firmy.",
+    },    
+    {
+      header: "CRM",
+      description: "CRM jest aplikacją łączącą kilka różnych źródłeł danych pozwalając na szybki dostęp w uporządkowanym miejscu. CRM wykorzystuje .NET 5.0 MVC z bazą Oracle. Dodatkowo wykorzystywany był DevExpress. Aplikacja umożliwiała dostęp do informacji podatników z wyszczególnieniem źrodeł danych. Pozwalała na zaawansowane filtrowanie danych, wyświetlała informację ze wskaźników biznesowych oraz umożliwiała generować raporty.",
+  }
 ];
+
+export const UnityProjects = [
+  {
+    header:"QuizUnit",
+    description:"QuizUnit - jest to gra utworzona w Unity, której przebieg gry oparty jest o Quiz. Pytania zostały dobrane tak by przypominały o podstawie tworzenia gier w Unity. Quiz składał się z 3 scen: Start - Gra - Ekran końcowy. Podczas gry użytkownik musiał odpowiedzieć na pytanie z limitem czasu. Pytania są generowane losowo co utrudnia, użytkownikowi strzelanie. Po odpowiedzeniu na wszystkie pytania, użytkownik witał się z ekranem końcowym, na którym pokazany był jego wynik, oraz przycisk umożliwiający przejście gry ponownie.",
+    repositoryUsername:"Xenorsek",
+    repositoryName:"QuizUnit"
+  },
+  {
+    header:"Snowboarder",
+    description:"Snowboarder jest grą, w której użytkownik wciela się w snowboardzistę, który zjeżdża po stoku tak by dotrzeć do mety. Musi uważać na przeszkody oraz na swoją głowę, która jest jego punktem krytycznym. Gracz może przekręcać postać i przyśpieszać podczas jazdy po śniegu tak aby uniknąć przeszkody i ukończyć stok w jak najlepszym stanie oraz o dobrym czasie.",
+    repositoryUsername:"Xenorsek",
+    repositoryName:"Snowboarder"
+  }
+];
+
+export const skillsArray = [ {label:"React" , icon: <ReactIcon />}, {label:"Azure portal"}, {label:"ASP .NET Core"}, {label:"Entity FrameworkCore"}, {label:"REST"}, {label:"Linq"}, {label:"Hangfire"}, {label:"Automapper"}, {label:"Dapper"}, {label:"SOLID"}, {label:"Unit tests"}, {label:"GIT"}, {label: "Redux"}, {label:"Material UI"}, {label:"npm"}, {label:"NuGet"}, {label:"MVC"}, {label:"MySQL"}, {label:"Jira"}, {label:"Scrum"}, {label:"Agile"}];
