@@ -9,9 +9,9 @@ import Snowboarder1 from "../images/Snowboarder1.png";
 import Snowboarder2 from "../images/Snowboarder2.png";
 import Snowboarder3 from "../images/Snowboarder3.png";
 
-export const AboutContent = "Witaj! Nazywam się Marcin Kozłowski. Jestem absolwentem studiów informatycznych. Już w technikum informatycznym rozwijałem swoje umiejętności programowania. Polubiłem szczególnie dwie technologie, którymi są .NET i React. Od 2021 roku zajmuję się projektowaniem i tworzeniem oprogramowania zawodowo.";
+export const AboutContent = "Witaj! Nazywam się Marcin Kozłowski. Jestem absolwentem studiów informatycznych. Już w technikum informatycznym rozwijałem swoje umiejętności programowania. Polubiłem szczególnie dwie technologie, którymi są .NET i React. Od 2020 roku zajmuję się projektowaniem i tworzeniem oprogramowania zawodowo.";
 
-export const PassionContent = "Jestem osobą, która od dłuższego czasu zgłębia tajniki programowania, a moją pasją stało się tworzenie oprogramowania w technologiach .NET i React. Od 2021 roku mam przyjemność pracować zawodowo w tych dziedzinach, co pozwoliło mi rozwinąć umiejętności i zdobyć cenne doświadczenie.";
+export const PassionContent = "Jestem osobą, która od dłuższego czasu zgłębia tajniki programowania, a moją pasją stało się tworzenie oprogramowania w technologiach .NET i React. Od 2020 roku mam przyjemność pracować zawodowo w tych dziedzinach, co pozwoliło mi rozwinąć umiejętności i zdobyć cenne doświadczenie.";
 
 export const reactProjects = [
     {

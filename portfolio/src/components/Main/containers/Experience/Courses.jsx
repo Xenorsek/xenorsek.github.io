@@ -9,7 +9,7 @@ function Courses(){
             <Divider />
                 <CardContent>
                     <div className="courses">
-                        <Course progress={50}
+                        <Course progress={100}
                             color="success"
                             title="Learn Unity in C# & Code your First Five 2D Video Games for Web, Mac & PC. The Tutorials Cover Tilemap. GameDev.tv"
                             icon={<Gamepad color="success"/>}
