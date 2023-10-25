@@ -11,6 +11,9 @@ import quizUnit3 from "../images/quizUnit3.png";
 import Snowboarder1 from "../images/Snowboarder1.png";
 import Snowboarder2 from "../images/Snowboarder2.png";
 import Snowboarder3 from "../images/Snowboarder3.png";
+import tilevania1 from "../images/tilevania1.png";
+import tilevania2 from "../images/tilevania2.png";
+import tilevania3 from "../images/tilevania3.png";
 
 export const AboutContent = "Witaj! Nazywam się Marcin Kozłowski. Jestem absolwentem studiów informatycznych. Już w technikum informatycznym rozwijałem swoje umiejętności programowania. Polubiłem szczególnie dwie technologie, którymi są .NET i React. Od 2020 roku zajmuję się projektowaniem i tworzeniem oprogramowania zawodowo.";
 
@@ -120,6 +123,26 @@ export const UnityProjects = [
       {
         label: 'Snowboarder',
         imgPath:Snowboarder3
+      },
+    ],
+  },
+  {
+    header:"TileVania",
+    description:"Tilevania jest platformówką gdzie użytkownik musi uważać na wrogów, kwas i kolce. Skacz wysoko i dotrzyj do wyjścia. Przed tobą stoją 3 etapy. Powodzenia!",
+    repositoryUsername:"Xenorsek",
+    repositoryName:"Snowboarder",
+    images: [
+      {
+        label: 'Tilevania',
+        imgPath: tilevania1
+      },
+      {
+        label: 'Tilevania',
+        imgPath:tilevania2,
+      },
+      {
+        label: 'Tilevania',
+        imgPath:tilevania3
       },
     ],
   }
