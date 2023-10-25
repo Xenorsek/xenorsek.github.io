@@ -128,9 +128,9 @@ export const UnityProjects = [
   },
   {
     header:"TileVania",
-    description:"Tilevania jest platformówką gdzie użytkownik musi uważać na wrogów, kwas i kolce. Skacz wysoko i dotrzyj do wyjścia. Przed tobą stoją 3 etapy. Powodzenia!",
+    description:"Tilevania jest platformówką gdzie użytkownik musi uważać na wrogów, kwas i kolce. Skacz wysoko i dotrzyj do wyjścia. Przed tobą stoją 3 etapy na których będziesz musiał sprawnie poruszać się po platformach skacząc i robiąc zwariowane akrobacje. Czy jesteś na to gotowy? Pamiętaj o tym że możesz tutaj strzelać! Baw się przy tym dobrze! To najlepsza gra tego roku! Do tego ta gra jest bardzo kreatywna bo jest to platformówka, twój mózg przy tej grze pracuje na najwyższych obrotach, nie ma nic bardziej kreatywnego dla twojego samopoczucia niż to! Powodzenia!",
     repositoryUsername:"Xenorsek",
-    repositoryName:"Snowboarder",
+    repositoryName:"tilevania",
     images: [
       {
         label: 'Tilevania',
