@@ -2,6 +2,9 @@ import ReactIcon from "../../components/custom/ReactIcon";
 import musicConverter from "../images/musicConverter.png";
 import musicConverter1 from "../images/musicConverter1.png";
 import musicConverter2 from "../images/musicConverter2.png";
+import usersnotebook1 from "../images/usersnotebook1.png";
+import usersnotebook2 from "../images/usersnotebook2.png";
+import usersnotebook3 from "../images/usersnotebook3.png";
 import quizUnit1 from "../images/quizUnit1.png";
 import quizUnit2 from "../images/quizUnit2.png";
 import quizUnit3 from "../images/quizUnit3.png";
@@ -38,6 +41,31 @@ export const reactProjects = [
           imageHeight:'200px',
     }
 ];
+
+export const netProjects = [
+  {
+    header: "UsersNotebook",
+    description: "Aplikacja UsersNotebook umożliwia zarządzanie użytkownikami: dodawanie, edycję, usuwanie oraz generowanie raportów w PDF. Zbudowana w ASP.NET Core 7 z wykorzystaniem MVC, Entity Framework oraz Docker.",
+    repositoryUserName: "xenorsek",
+    repositoryName: "UsersNotebook",
+    images: [
+      {
+        label: 'Strona główna',
+        imgPath: usersnotebook1
+      },
+      {
+        label: 'Dodaj użytkownika',
+        imgPath:usersnotebook2,
+      },
+      {
+        label: 'Raport',
+        imgPath:usersnotebook3
+      },
+    ],
+    imageWidth:'400px',
+    imageHeight:'200px',
+  }
+]
 
 export const professionalProjects = [
     {
