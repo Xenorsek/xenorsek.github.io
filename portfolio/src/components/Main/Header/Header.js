@@ -122,6 +122,7 @@ return (
             <MenuItem onClick={()=>{scrollToSection(0)}}>O mnie</MenuItem>             
             <MenuItem onClick={()=>{scrollToSection(1)}}>Doświadczenie</MenuItem>
             <MenuItem onClick={()=>{scrollToSection(2)}}>Projekty</MenuItem>
+            <MenuItem onClick={handleChangeDarkMode}>Dark mode <Switch checked={darkMode}/></MenuItem>  
         </Menu>
         <Menu
             id="page-settings-menu"
